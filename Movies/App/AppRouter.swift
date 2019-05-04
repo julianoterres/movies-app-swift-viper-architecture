@@ -6,4 +6,20 @@
 //  Copyright © 2019 Juliano Terres. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class AppRouter {
+  
+  func buildMainScreen() -> UIViewController {
+    
+    let navigation = UINavigationController()
+    let movieListView = MovieListRouter().build()
+    
+    navigation.viewControllers = [movieListView]
+    
+    return navigation
+    
+  }
+  
+}
+
