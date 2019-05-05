@@ -154,29 +154,6 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		E36948F7227CFBD900F86018 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				E36948F8227CFBE400F86018 /* Api */,
-				E36948F9227CFBE900F86018 /* Presentation */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		E36948F8227CFBE400F86018 /* Api */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		E36948F9227CFBE900F86018 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		E3694909227CFC9F00F86018 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +352,6 @@
 		E3824FAB227CEFD1005FC2E2 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
-				E36948F7227CFBD900F86018 /* Entity */,
 				E3694900227CFC3200F86018 /* MovieDetailProtocols.swift */,
 				E3694902227CFC4000F86018 /* MovieDetailRouter.swift */,
 				E3694905227CFC6C00F86018 /* MovieDetailView.swift */,
