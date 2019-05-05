@@ -11,7 +11,7 @@ import UIKit
 // MARK: Methods of View to Presenter
 protocol MovieListViewToPresenterProtocol: class {
   func fetchMovies(searchText: String)
-  func goToScreenDetails()
+  func goToScreenDetails(movie: MovieListPresentation)
 }
 
 // MARK: Methods of MovieListPresenterProtocol
@@ -36,7 +36,7 @@ protocol MovieListPresenterToViewProtocol: class {
 
 // MARK: Methods of Presenter to Router
 protocol MovieListPresenterToRouterProtocol: class {
-  func goToScreenDetails()
+  func goToScreenDetails(movie: MovieListPresentation)
 }
 
 // MARK: Methods of MovieListInteractorProtocol

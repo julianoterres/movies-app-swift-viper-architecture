@@ -97,13 +97,19 @@ extension MovieListInteractor: MovieListWorkerToInteractorProtocol {
         }).filter({ !$0.isEmpty }).joined(separator: " - ")
       }
       
+      var description = "No Description"
+      
+      if let overview = movie.overview, !overview.isEmpty {
+        description = overview
+      }
+      
       let posterUrl = ImagesBaseUrlEnum.poster185.rawValue + (movie.poster_path ?? "")
       let backdropUrl = ImagesBaseUrlEnum.backdrop500.rawValue + (movie.backdrop_path ?? "")
       
       return MovieListPresentation(
         backdrop: URL(string: backdropUrl)!,
         date: movie.release_date?.convetDatePtBr ?? "No date",
-        description: movie.overview ?? "No description",
+        description: description,
         genres: genres,
         poster: URL(string: posterUrl)!,
         titlte: movie.title ?? "No title"

@@ -22,8 +22,8 @@ extension MovieListPresenter: MovieListViewToPresenterProtocol {
     interactor?.fetchMovies(searchText: searchText)
   }
   
-  func goToScreenDetails() {
-    router?.goToScreenDetails()
+  func goToScreenDetails(movie: MovieListPresentation) {
+    router?.goToScreenDetails(movie: movie)
   }
   
 }

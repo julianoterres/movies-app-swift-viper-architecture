@@ -20,15 +20,27 @@ class MovieDetailView: UIViewController {
   let genreContainer = UIView()
   let genreLabel = UILabel()
   
+  var movie: MovieListPresentation!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
     addElementsInScreen()
+    setupElements()
   }
   
   func setupView() {
-    title = "Movie Detail"
     view.backgroundColor = .background
+    title = "Movie Detail"
+  }
+  
+  func setupElements() {
+    titleLabel.text = movie.titlte
+    backdropImage.kf.setImage(with: movie.backdrop, placeholder: UIImage().placeholder())
+    posterImage.kf.setImage(with: movie.poster, placeholder: UIImage().placeholder())
+    dateLabel.text = movie.date
+    genreLabel.text = movie.genres
+    descriptionLabel.text = movie.description
   }
   
   func addElementsInScreen() {
@@ -52,7 +64,6 @@ class MovieDetailView: UIViewController {
   
   func addBackdropImage() {
     scrollView.addSubview(backdropImage)
-    backdropImage.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w1000_and_h563_face/jC1KqsFx8ZyqJyQa2Ohi7xgL7XC.jpg")!)
     backdropImage.clipsToBounds = true
     backdropImage.contentMode = .scaleAspectFill
     backdropImage.addConstraint(attribute: .top, alignElement: scrollView, alignElementAttribute: .top, constant: 0)
@@ -64,7 +75,6 @@ class MovieDetailView: UIViewController {
   
   func addPosterImage() {
     scrollView.addSubview(posterImage)
-    posterImage.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w185_and_h278_bestv2/lUFK7ElGCk9kVEryDJHICeNdmd1.jpg")!)
     posterImage.clipsToBounds = true
     posterImage.contentMode = .scaleAspectFill
     posterImage.addConstraint(attribute: .top, alignElement: backdropImage, alignElementAttribute: .bottom, constant: -80)
@@ -75,7 +85,6 @@ class MovieDetailView: UIViewController {
   
   func addDateLabel() {
     scrollView.addSubview(dateLabel)
-    dateLabel.text = "Data Lançamento"
     dateLabel.font = .fontBold20
     dateLabel.textColor = .title
     dateLabel.numberOfLines = 0
@@ -87,15 +96,16 @@ class MovieDetailView: UIViewController {
     scrollView.addSubview(genreContainer)
     genreContainer.backgroundColor = .category
     genreContainer.layer.cornerRadius = 4
-    genreContainer.addConstraint(attribute: .bottom, alignElement: posterImage, alignElementAttribute: .bottom, constant: 0)
+    genreContainer.addConstraint(attribute: .top, alignElement: dateLabel, alignElementAttribute: .bottom, constant: 5)
     genreContainer.addConstraint(attribute: .left, alignElement: dateLabel, alignElementAttribute: .left, constant: 0)
+    genreContainer.addConstraint(attribute: .right, alignElement: scrollView, alignElementAttribute: .right, constant: 15)
   }
   
   func addGenreLabel() {
     genreContainer.addSubview(genreLabel)
     genreLabel.textColor = .white
     genreLabel.font = .fontRegular11
-    genreLabel.text = "Category name"
+    genreLabel.numberOfLines = 0
     genreLabel.addConstraint(attribute: .top, alignElement: genreContainer, alignElementAttribute: .top, constant: 5)
     genreLabel.addConstraint(attribute: .left, alignElement: genreContainer, alignElementAttribute: .left, constant: 5)
     genreLabel.addConstraint(attribute: .right, alignElement: genreContainer, alignElementAttribute: .right, constant: 5)
@@ -104,11 +114,10 @@ class MovieDetailView: UIViewController {
   
   func addTitleLabel() {
     scrollView.addSubview(titleLabel)
-    titleLabel.text = "Sinopse"
     titleLabel.font = .fontBold20
     titleLabel.textColor = .title
     titleLabel.numberOfLines = 0
-    titleLabel.addConstraint(attribute: .top, alignElement: posterImage, alignElementAttribute: .bottom, constant: 15)
+    titleLabel.addConstraint(attribute: .top, alignElement: genreContainer, alignElementAttribute: .bottom, constant: 15)
     titleLabel.addConstraint(attribute: .right, alignElement: scrollView, alignElementAttribute: .right, constant: 15)
     titleLabel.addConstraint(attribute: .left, alignElement: scrollView, alignElementAttribute: .left, constant: 15)
     titleLabel.addConstraint(attribute: .centerX, alignElement: scrollView, alignElementAttribute: .centerX, constant: 0)

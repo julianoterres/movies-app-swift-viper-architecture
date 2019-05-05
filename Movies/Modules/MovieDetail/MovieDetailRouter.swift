@@ -11,8 +11,9 @@ import UIKit
 // MARK: Methods of MovieDetailRouterProtocol
 class MovieDetailRouter {
   
-  func build() -> UIViewController {
+  func build(movie: MovieListPresentation) -> UIViewController {
     let view = MovieDetailView()
+    view.movie = movie
     return view
   }
   

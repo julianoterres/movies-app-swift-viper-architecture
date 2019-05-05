@@ -14,13 +14,9 @@
 		E36948EF227CFB7200F86018 /* MovieListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36948EE227CFB7200F86018 /* MovieListWorker.swift */; };
 		E36948F1227CFB8300F86018 /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36948F0227CFB8300F86018 /* MovieListRouter.swift */; };
 		E36948F3227CFB9300F86018 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36948F2227CFB9300F86018 /* MovieListCell.swift */; };
-		E36948FB227CFC0300F86018 /* MovieDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36948FA227CFC0300F86018 /* MovieDetailCell.swift */; };
-		E36948FD227CFC1600F86018 /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36948FC227CFC1600F86018 /* MovieDetailInteractor.swift */; };
-		E36948FF227CFC2100F86018 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36948FE227CFC2100F86018 /* MovieDetailPresenter.swift */; };
 		E3694901227CFC3200F86018 /* MovieDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694900227CFC3200F86018 /* MovieDetailProtocols.swift */; };
 		E3694903227CFC4000F86018 /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694902227CFC4000F86018 /* MovieDetailRouter.swift */; };
 		E3694906227CFC6C00F86018 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694905227CFC6C00F86018 /* MovieDetailView.swift */; };
-		E3694908227CFC7C00F86018 /* MovieDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694907227CFC7C00F86018 /* MovieDetailWorker.swift */; };
 		E369490E227CFCC000F86018 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E369490D227CFCC000F86018 /* Network.swift */; };
 		E3694910227CFCD100F86018 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E369490F227CFCD100F86018 /* NetworkProtocol.swift */; };
 		E3694913227CFCF400F86018 /* UrlsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3694912227CFCF400F86018 /* UrlsApi.swift */; };
@@ -70,13 +66,9 @@
 		E36948EE227CFB7200F86018 /* MovieListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWorker.swift; sourceTree = "<group>"; };
 		E36948F0227CFB8300F86018 /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
 		E36948F2227CFB9300F86018 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
-		E36948FA227CFC0300F86018 /* MovieDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCell.swift; sourceTree = "<group>"; };
-		E36948FC227CFC1600F86018 /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
-		E36948FE227CFC2100F86018 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		E3694900227CFC3200F86018 /* MovieDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocols.swift; sourceTree = "<group>"; };
 		E3694902227CFC4000F86018 /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
 		E3694905227CFC6C00F86018 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
-		E3694907227CFC7C00F86018 /* MovieDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailWorker.swift; sourceTree = "<group>"; };
 		E369490D227CFCC000F86018 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E369490F227CFCD100F86018 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		E3694912227CFCF400F86018 /* UrlsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlsApi.swift; sourceTree = "<group>"; };
@@ -384,13 +376,9 @@
 			isa = PBXGroup;
 			children = (
 				E36948F7227CFBD900F86018 /* Entity */,
-				E36948FA227CFC0300F86018 /* MovieDetailCell.swift */,
-				E36948FC227CFC1600F86018 /* MovieDetailInteractor.swift */,
-				E36948FE227CFC2100F86018 /* MovieDetailPresenter.swift */,
 				E3694900227CFC3200F86018 /* MovieDetailProtocols.swift */,
 				E3694902227CFC4000F86018 /* MovieDetailRouter.swift */,
 				E3694905227CFC6C00F86018 /* MovieDetailView.swift */,
-				E3694907227CFC7C00F86018 /* MovieDetailWorker.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -543,7 +531,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36948F3227CFB9300F86018 /* MovieListCell.swift in Sources */,
-				E36948FB227CFC0300F86018 /* MovieDetailCell.swift in Sources */,
 				E3694930227D2C1600F86018 /* UIViewControllerExtension.swift in Sources */,
 				E369493F227E29ED00F86018 /* MovieListGenresApi.swift in Sources */,
 				E3694917227D00A600F86018 /* UIViewExtension.swift in Sources */,
@@ -551,12 +538,10 @@
 				E3694927227D1B3F00F86018 /* UIFontExtension.swift in Sources */,
 				E3694944227E2F7400F86018 /* EnumDefinitions.swift in Sources */,
 				E3694946227E31BC00F86018 /* StringExtension.swift in Sources */,
-				E3694908227CFC7C00F86018 /* MovieDetailWorker.swift in Sources */,
 				E3694941227E2A4600F86018 /* MovieListGenresResponseApi.swift in Sources */,
 				E3694913227CFCF400F86018 /* UrlsApi.swift in Sources */,
 				E36948ED227CFB6700F86018 /* MovieListInteractor.swift in Sources */,
 				E369493C227E200300F86018 /* MovieListPresentation.swift in Sources */,
-				E36948FF227CFC2100F86018 /* MovieDetailPresenter.swift in Sources */,
 				E3694910227CFCD100F86018 /* NetworkProtocol.swift in Sources */,
 				E3694939227E1AED00F86018 /* MovieListMovieApi.swift in Sources */,
 				E3694903227CFC4000F86018 /* MovieDetailRouter.swift in Sources */,
@@ -566,7 +551,6 @@
 				E3694932227D2C2800F86018 /* UINavigationControllerExtension.swift in Sources */,
 				E3694948227E412C00F86018 /* UIImageExtension.swift in Sources */,
 				E3694901227CFC3200F86018 /* MovieDetailProtocols.swift in Sources */,
-				E36948FD227CFC1600F86018 /* MovieDetailInteractor.swift in Sources */,
 				E369494B227F41B000F86018 /* ErrorView.swift in Sources */,
 				E3824F83227CECD7005FC2E2 /* AppDelegate.swift in Sources */,
 				E369490E227CFCC000F86018 /* Network.swift in Sources */,

@@ -157,7 +157,7 @@ extension MovieListView: UICollectionViewDelegate, UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    presenter?.goToScreenDetails()
+    presenter?.goToScreenDetails(movie: movies[indexPath.row])
   }
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {

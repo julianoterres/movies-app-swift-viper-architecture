@@ -43,8 +43,8 @@ class MovieListRouter: MovieListRouterProtocol {
 // MARK: Methods of MovieListPresenterToRouterProtocol
 extension MovieListRouter: MovieListPresenterToRouterProtocol {
   
-  func goToScreenDetails() {
-    let postDetailView = MovieDetailRouter().build()
+  func goToScreenDetails(movie: MovieListPresentation) {
+    let postDetailView = MovieDetailRouter().build(movie: movie)
     view?.navigationController?.pushViewController(postDetailView, animated: true)
   }
   
