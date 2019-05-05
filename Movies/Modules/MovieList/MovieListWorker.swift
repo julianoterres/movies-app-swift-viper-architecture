@@ -16,6 +16,24 @@ class MovieListWorker: MovieListWorkerProtocol {
   var network: NetworkProtocol?
   var urlsApi: UrlsApiProtocol?
   
+  func fetchMovies(url: String, parameters: Parameters) {
+    
+    network?.request(url: url, method: .get, parameters: parameters, success: { [weak self] (response) in
+      
+      do {
+        let responseApi = try JSONDecoder().decode(MovieListResponseApi.self, from: response)
+        self?.interactor?.fetchedMovies(response: responseApi)
+      } catch {
+        print(error.localizedDescription)
+        self?.interactor?.fetchedFail()
+      }
+      
+      }, failure: { [weak self] _ in
+        self?.interactor?.fetchedFail()
+    })
+    
+  }
+  
 }
 
 // MARK: Methods of MovieListInteractorToWorkerProtocol
@@ -77,24 +95,6 @@ extension MovieListWorker: MovieListInteractorToWorkerProtocol {
     ]
     
     fetchMovies(url: url, parameters: parameters)
-    
-  }
-  
-  private func fetchMovies(url: String, parameters: Parameters) {
-    
-    network?.request(url: url, method: .get, parameters: parameters, success: { [weak self] (response) in
-      
-      do {
-        let responseApi = try JSONDecoder().decode(MovieListResponseApi.self, from: response)
-        self?.interactor?.fetchedMovies(response: responseApi)
-      } catch {
-        print(error.localizedDescription)
-        self?.interactor?.fetchedFail()
-      }
-      
-    }, failure: { [weak self] _ in
-      self?.interactor?.fetchedFail()
-    })
     
   }
   

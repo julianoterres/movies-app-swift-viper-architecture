@@ -21,6 +21,49 @@ class MovieListInteractor: MovieListInteractorProtocol {
   var totalMovies = 0
   var searchTextSaved = ""
   
+  func proccessMovies(movieListApi: MovieListResponseApi) {
+    
+    let movies = movieListApi.results.map { (movie) -> MovieListPresentation in
+      
+      var genres = "No Category"
+      
+      if let genresIds = movie.genre_ids, !genresIds.isEmpty {
+        genres = genresIds.map({ (genre) -> String in
+          let genreData = genresAlreadyFetched.first(where: { $0.id == genre })
+          return genreData?.name ?? ""
+        }).filter({ !$0.isEmpty }).joined(separator: " - ")
+      }
+      
+      var description = "No Description"
+      
+      if let overview = movie.overview, !overview.isEmpty {
+        description = overview
+      }
+      
+      let posterUrl = ImagesBaseUrlEnum.poster185.rawValue + (movie.poster_path ?? "")
+      let backdropUrl = ImagesBaseUrlEnum.backdrop500.rawValue + (movie.backdrop_path ?? "")
+      
+      return MovieListPresentation(
+        backdrop: URL(string: backdropUrl)!,
+        date: movie.release_date?.convetDatePtBr ?? "No date",
+        description: description,
+        genres: genres,
+        poster: URL(string: posterUrl)!,
+        titlte: movie.title ?? "No title"
+      )
+      
+    }
+    
+    fetchActive = false
+    page += 1
+    moviesAlreadyFetched.append(contentsOf: movies)
+    totalMovies = movieListApi.total_results
+    movieListResponseApiTemp = nil
+    
+    presenter?.fetchedMovies(movies: moviesAlreadyFetched)
+    
+  }
+  
 }
 
 // MARK: Methods of MovieListPresenterToInteractorProtocol
@@ -81,49 +124,6 @@ extension MovieListInteractor: MovieListWorkerToInteractorProtocol {
     if let moviesTemp = movieListResponseApiTemp {
       proccessMovies(movieListApi: moviesTemp)
     }
-    
-  }
-  
-  func proccessMovies(movieListApi: MovieListResponseApi) {
-    
-    let movies = movieListApi.results.map { (movie) -> MovieListPresentation in
-      
-      var genres = "No Category"
-      
-      if let genresIds = movie.genre_ids, !genresIds.isEmpty {
-        genres = genresIds.map({ (genre) -> String in
-          let genreData = genresAlreadyFetched.first(where: { $0.id == genre })
-          return genreData?.name ?? ""
-        }).filter({ !$0.isEmpty }).joined(separator: " - ")
-      }
-      
-      var description = "No Description"
-      
-      if let overview = movie.overview, !overview.isEmpty {
-        description = overview
-      }
-      
-      let posterUrl = ImagesBaseUrlEnum.poster185.rawValue + (movie.poster_path ?? "")
-      let backdropUrl = ImagesBaseUrlEnum.backdrop500.rawValue + (movie.backdrop_path ?? "")
-      
-      return MovieListPresentation(
-        backdrop: URL(string: backdropUrl)!,
-        date: movie.release_date?.convetDatePtBr ?? "No date",
-        description: description,
-        genres: genres,
-        poster: URL(string: posterUrl)!,
-        titlte: movie.title ?? "No title"
-      )
-      
-    }
-    
-    fetchActive = false
-    page += 1
-    moviesAlreadyFetched.append(contentsOf: movies)
-    totalMovies = movieListApi.total_results
-    movieListResponseApiTemp = nil
-    
-    presenter?.fetchedMovies(movies: moviesAlreadyFetched)
     
   }
   
