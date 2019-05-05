@@ -10,6 +10,15 @@ This project was building using the VIPER and Clean code
 
 This project use the Quick/Nimble to make a tests
 
+## Third-party libraries
+
+**Alamofire** - Is a lib to make requests to API. I used this library, because is the a most used library by iOS community, and because this lib receive many updates constantly and you can calls to API easier and have many options ready to used in many situacions.
+
+**Kingfisher** - Is a lib that load images from URL, I used this lib because with she, you get load and maintain images caches easier.
+
+**Quick/Nimble** - Is a lib used to make unit tests, with she, you can write tests that be easier to read and understand what happen in test content.
+
+
 ## Clone repository
 
 If you don't have git installed in your mac, you need install following the [documentation of git].
