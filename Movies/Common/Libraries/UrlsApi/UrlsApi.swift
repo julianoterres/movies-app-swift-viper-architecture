@@ -10,14 +10,19 @@ import Foundation
 
 class UrlsApi: UrlsApiProtocol {
   
-  private let baseUlr = "https://jsonplaceholder.typicode.com/"
+  private let baseUlr = "https://api.themoviedb.org/3/"
+  var key = "1f54bd990f1cdfb230adb312546d765d"
   
-  var posts: URL? {
-    return URL(string: baseUlr + "posts")
+  func upcoming() -> String {
+    return baseUlr + "movie/upcoming"
   }
   
-  var users: URL? {
-    return URL(string: baseUlr + "users")
+  func search() -> String {
+    return baseUlr + "search/movie"
+  }
+  
+  func genres() -> String {
+    return baseUlr + "genre/movie/list"
   }
   
 }

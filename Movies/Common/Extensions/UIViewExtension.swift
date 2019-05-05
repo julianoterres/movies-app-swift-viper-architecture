@@ -15,8 +15,7 @@ extension UIView {
     alignElement: Any?,
     alignElementAttribute: NSLayoutConstraint.Attribute,
     constant: CGFloat,
-    typeSize: NSLayoutConstraint.Relation = .equal) -> NSLayoutConstraint
-  {
+    typeSize: NSLayoutConstraint.Relation = .equal) -> NSLayoutConstraint {
     self.translatesAutoresizingMaskIntoConstraints = false
     let constraint = NSLayoutConstraint(
       item: self,

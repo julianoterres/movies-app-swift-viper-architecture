@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: Methods of View to Presenter
 protocol MovieListViewToPresenterProtocol: class {
-  func fetchMovies()
+  func fetchMovies(searchText: String)
   func goToScreenDetails()
 }
 
@@ -23,13 +23,14 @@ protocol MovieListPresenterProtocol: class {
 
 // MARK: Methods of Presenter to Interactor
 protocol MovieListPresenterToInteractorProtocol: class {
-  func fetchMovies()
+  func fetchMovies(searchText: String)
 }
 
 // MARK: Methods of Presenter to View
 protocol MovieListPresenterToViewProtocol: class {
   var presenter: MovieListViewToPresenterProtocol? { get set }
-  func showMovies()
+  func showMovies(moviesList: [MovieListPresentation])
+  func notResultsFound()
   func showError()
 }
 
@@ -40,18 +41,20 @@ protocol MovieListPresenterToRouterProtocol: class {
 
 // MARK: Methods of MovieListInteractorProtocol
 protocol MovieListInteractorProtocol: class {
-  var presenter: MovieListInteractorToPresenterProtocol?  { get set }
-  var worker: MovieListInteractorToWorkerProtocol?  { get set }
+  var presenter: MovieListInteractorToPresenterProtocol? { get set }
+  var worker: MovieListInteractorToWorkerProtocol? { get set }
 }
 
 // MARK: Methods of Interactor to Worker
 protocol MovieListInteractorToWorkerProtocol: class {
-  func fetchMovies()
+  func fetchUpcomingMovies(page: Int)
+  func fetchSearchMovies(searchText: String, page: Int)
+  func fetchGenres()
 }
 
 // MARK: Methods of Interactor to Present
 protocol MovieListInteractorToPresenterProtocol: class {
-  func fetchedMovies()
+  func fetchedMovies(movies: [MovieListPresentation])
   func fetchedFail()
 }
 
@@ -64,7 +67,8 @@ protocol MovieListWorkerProtocol: class {
 
 // MARK: Methods of Woker to Interactor
 protocol MovieListWorkerToInteractorProtocol: class {
-  func fetchedMovies()
+  func fetchedMovies(response: MovieListResponseApi)
+  func fetchedGenres(response: MovieListGenresResponseApi)
   func fetchedFail()
 }
 
@@ -73,4 +77,3 @@ protocol MovieListRouterProtocol: class {
   var view: UIViewController? { get set }
   func build() -> UIViewController
 }
-

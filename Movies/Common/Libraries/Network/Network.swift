@@ -10,8 +10,23 @@ import Alamofire
 
 class Network: NetworkProtocol {
   
-  func request(url: URL, method: HTTPMethod, parameters: Parameters?, success: @escaping (Data) -> Void, failure: @escaping (String) -> Void) {
-    print("->START REQUEST:(\(method.rawValue))\n\(url.absoluteString)\n")
+  func request(url: String, method: HTTPMethod, parameters: Parameters?, success: @escaping (Data) -> Void, failure: @escaping (String) -> Void) {
+    
+    print("->START REQUEST:(\(method.rawValue))\n\(url)\n")
+    
+    guard var url = URLComponents(string: url)else {
+      failure("Error create URL")
+      return
+    }
+    
+    var parameters = parameters
+    
+    if let parametersPassed = parameters, method == .get {
+      let queryItens = parametersPassed.map { URLQueryItem(name: $0.key, value: ($0.value as? String)) }
+      url.queryItems = queryItens
+      parameters = nil
+    }
+    
     Alamofire.request(url, method: method, parameters: parameters).validate().responseJSON(completionHandler: { response in
       self.logAlamofireRequest(response: response)
       switch response.result {
@@ -23,6 +38,7 @@ class Network: NetworkProtocol {
         failure(error.localizedDescription)
       }
     })
+    
   }
   
   private func logAlamofireRequest(response: DataResponse<Any>) {
@@ -40,7 +56,7 @@ class Network: NetworkProtocol {
       do {
         let jsonBody = try JSONSerialization.jsonObject(with: httpBody)
         print("->BODY\n")
-        print(String(data: try! JSONSerialization.data(withJSONObject: jsonBody, options: .prettyPrinted), encoding: .utf8)!)
+        print(String(data: try JSONSerialization.data(withJSONObject: jsonBody, options: .prettyPrinted), encoding: .utf8)!)
         print("\n")
       } catch {
         print("Error in the print of the body")
@@ -54,10 +70,13 @@ class Network: NetworkProtocol {
     }
     
     if let values = response.result.value {
-      print(String(data: try! JSONSerialization.data(withJSONObject: values, options: .prettyPrinted), encoding: .utf8)!)
+      do {
+        print(String(data: try JSONSerialization.data(withJSONObject: values, options: .prettyPrinted), encoding: .utf8) ?? "")
+      } catch {
+        print("Error in the print of the response value")
+      }
+      
     }
   }
   
 }
-
-

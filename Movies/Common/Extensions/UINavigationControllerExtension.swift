@@ -26,10 +26,10 @@ extension UINavigationController {
     navigationBar.backgroundColor = UIColor.clear
     navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
     navigationBar.shadowImage = UIImage()
-    let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-    statusBar.backgroundColor = UIColor.clear
     navigationBar.setValue(true, forKey: "hidesShadow")
+    if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
+    statusBar.backgroundColor = UIColor.clear
+    }
   }
   
 }
-

@@ -9,6 +9,8 @@
 import Foundation
 
 protocol UrlsApiProtocol: class {
-  var posts: URL? { get }
-  var users: URL? { get }
+  var key: String { get set }
+  func upcoming() -> String
+  func search() -> String
+  func genres() -> String
 }

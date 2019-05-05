@@ -6,4 +6,14 @@
 //  Copyright © 2019 Juliano Terres. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+// MARK: Methods of MovieDetailRouterProtocol
+class MovieDetailRouter {
+  
+  func build() -> UIViewController {
+    let view = MovieDetailView()
+    return view
+  }
+  
+}

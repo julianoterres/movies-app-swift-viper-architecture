@@ -18,4 +18,14 @@ extension UISearchBar {
     
   }
   
+  func enableButtonCancel(_ enable: Bool) {
+    for view in self.subviews {
+      for subview in view.subviews {
+        if let button = subview as? UIButton {
+          button.isEnabled = enable
+        }
+      }
+    }
+  }
+  
 }

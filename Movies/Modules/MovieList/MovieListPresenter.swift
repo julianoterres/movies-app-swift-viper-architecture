@@ -18,12 +18,12 @@ class MovieListPresenter: MovieListPresenterProtocol {
 // MARK: Methods of MovieListViewToPresenterProtocol
 extension MovieListPresenter: MovieListViewToPresenterProtocol {
   
-  func fetchMovies() {
-    
+  func fetchMovies(searchText: String) {
+    interactor?.fetchMovies(searchText: searchText)
   }
   
   func goToScreenDetails() {
-    
+    router?.goToScreenDetails()
   }
   
 }
@@ -31,13 +31,16 @@ extension MovieListPresenter: MovieListViewToPresenterProtocol {
 // MARK: Methods of MovieListInteractorToPresenterProtocol
 extension MovieListPresenter: MovieListInteractorToPresenterProtocol {
   
-  func fetchedMovies() {
-    
+  func fetchedMovies(movies: [MovieListPresentation]) {
+    if movies.isEmpty {
+      view?.notResultsFound()
+    } else {
+      view?.showMovies(moviesList: movies)
+    }
   }
   
   func fetchedFail() {
-    
+    view?.showError()
   }
   
 }
-

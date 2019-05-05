@@ -33,21 +33,21 @@ class MovieListCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func setup() {
-    imagePoster.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w185_and_h278_bestv2/lUFK7ElGCk9kVEryDJHICeNdmd1.jpg")!)
-    titleLabel.text = "Lorem Ipsum is simply dummy"
-    shortDescritionLabel.text = "There are many variations of passages of Lorem Ipsum available There are many variations of passages of Lorem Ipsum available There are many variations of passages of Lorem Ipsum available..."
-    dateLabel.text = "May 5"
-    genreLabel.text = "Action"
+  func setup(movie: MovieListPresentation) {
+    imagePoster.kf.setImage(with: movie.poster, placeholder: UIImage().placeholder())
+    titleLabel.text = movie.titlte
+    shortDescritionLabel.text = movie.description
+    dateLabel.text = movie.date
+    genreLabel.text = movie.genres
   }
   
   func addElementsInScreen() {
     addContainerView()
     addImagePoster()
     addTitleLabel()
+    addDateLabel()
     addShortDescritionContainer()
     addShortDescritionLabel()
-    addDateLabel()
     addGenreContainer()
     addGenreLabel()
   }
@@ -89,10 +89,20 @@ class MovieListCell: UICollectionViewCell {
     titleLabel.addConstraint(attribute: .right, alignElement: containerView, alignElementAttribute: .right, constant: 15)
   }
   
+  func addDateLabel() {
+    containerView.addSubview(dateLabel)
+    dateLabel.textColor = .date
+    dateLabel.font = .fontBold12
+    dateLabel.numberOfLines = 0
+    dateLabel.addConstraint(attribute: .top, alignElement: titleLabel, alignElementAttribute: .bottom, constant: 5)
+    dateLabel.addConstraint(attribute: .left, alignElement: titleLabel, alignElementAttribute: .left, constant: 0)
+    dateLabel.addConstraint(attribute: .right, alignElement: containerView, alignElementAttribute: .right, constant: 0)
+  }
+  
   func addShortDescritionContainer() {
     containerView.addSubview(shortDescritionContainer)
     shortDescritionContainer.clipsToBounds = true
-    shortDescritionContainer.addConstraint(attribute: .top, alignElement: titleLabel, alignElementAttribute: .bottom, constant: 5)
+    shortDescritionContainer.addConstraint(attribute: .top, alignElement: dateLabel, alignElementAttribute: .bottom, constant: 5)
     shortDescritionContainer.addConstraint(attribute: .left, alignElement: imagePoster, alignElementAttribute: .right, constant: 15)
     shortDescritionContainer.addConstraint(attribute: .right, alignElement: containerView, alignElementAttribute: .right, constant: 15)
   }
@@ -107,28 +117,21 @@ class MovieListCell: UICollectionViewCell {
     shortDescritionLabel.addConstraint(attribute: .right, alignElement: shortDescritionContainer, alignElementAttribute: .right, constant: 0)
   }
   
-  func addDateLabel() {
-    containerView.addSubview(dateLabel)
-    dateLabel.textColor = .date
-    dateLabel.font = .fontBold12
-    dateLabel.numberOfLines = 0
-    dateLabel.addConstraint(attribute: .right, alignElement: containerView, alignElementAttribute: .right, constant: 15)
-  }
-  
   func addGenreContainer() {
     containerView.addSubview(genreContainer)
     genreContainer.backgroundColor = .category
     genreContainer.layer.cornerRadius = 4
-    genreContainer.addConstraint(attribute: .top, alignElement: shortDescritionContainer, alignElementAttribute: .bottom, constant: 15)
+    genreContainer.addConstraint(attribute: .top, alignElement: shortDescritionContainer, alignElementAttribute: .bottom, constant: 22)
     genreContainer.addConstraint(attribute: .left, alignElement: imagePoster, alignElementAttribute: .right, constant: 15)
-    genreContainer.addConstraint(attribute: .bottom, alignElement: containerView, alignElementAttribute: .bottom, constant: 15)
-    dateLabel.addConstraint(attribute: .centerY, alignElement: genreContainer, alignElementAttribute: .centerY, constant: 0)
+    genreContainer.addConstraint(attribute: .right, alignElement: containerView, alignElementAttribute: .right, constant: 15)
+    genreContainer.addConstraint(attribute: .bottom, alignElement: containerView, alignElementAttribute: .bottom, constant: 15) 
   }
   
   func addGenreLabel() {
     genreContainer.addSubview(genreLabel)
     genreLabel.textColor = .white
     genreLabel.font = .fontRegular11
+    genreLabel.numberOfLines = 0
     genreLabel.addConstraint(attribute: .top, alignElement: genreContainer, alignElementAttribute: .top, constant: 5)
     genreLabel.addConstraint(attribute: .left, alignElement: genreContainer, alignElementAttribute: .left, constant: 5)
     genreLabel.addConstraint(attribute: .right, alignElement: genreContainer, alignElementAttribute: .right, constant: 5)
