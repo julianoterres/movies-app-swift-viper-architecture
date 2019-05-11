@@ -1,0 +1,406 @@
+
+{
+  "results" : [
+    {
+      "id" : 456740,
+      "vote_average" : 5.2000000000000002,
+      "genre_ids" : [
+        28,
+        12,
+        14
+      ],
+      "original_title" : "Hellboy",
+      "backdrop_path" : "\/5BkSkNtfrnTuKOtTaZhl8avn4wU.jpg",
+      "adult" : false,
+      "popularity" : 250.43199999999999,
+      "poster_path" : "\/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg",
+      "title" : "Hellboy",
+      "overview" : "Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away.",
+      "original_language" : "en",
+      "vote_count" : 294,
+      "release_date" : "2019-04-10",
+      "video" : false
+    },
+    {
+      "id" : 445629,
+      "vote_average" : 6.5,
+      "genre_ids" : [
+        35,
+        18
+      ],
+      "original_title" : "Fighting with My Family",
+      "backdrop_path" : "\/ye42ldRnGMkSGkKLlPx9shccrzV.jpg",
+      "adult" : false,
+      "popularity" : 130.57900000000001,
+      "poster_path" : "\/3TZCBAdKQiz0cGKGEjZiyZUA01O.jpg",
+      "title" : "Fighting with My Family",
+      "overview" : "Born into a tight-knit wrestling family, Paige and her brother Zak are ecstatic when they get the once-in-a-lifetime opportunity to try out for the WWE. But when only Paige earns a spot in the competitive training program, she must leave her loved ones behind and face this new cutthroat world alone. Paige's journey pushes her to dig deep and ultimately prove to the world that what makes her different is the very thing that can make her a star.",
+      "original_language" : "en",
+      "vote_count" : 152,
+      "release_date" : "2019-02-14",
+      "video" : false
+    },
+    {
+      "id" : 487297,
+      "vote_average" : 5.7999999999999998,
+      "genre_ids" : [
+        35,
+        14,
+        10749
+      ],
+      "original_title" : "What Men Want",
+      "backdrop_path" : "\/wbAQKi2E5cO0Utk5KDk9yX3kuOu.jpg",
+      "adult" : false,
+      "popularity" : 96.177000000000007,
+      "poster_path" : "\/30IiwvIRqPGjUV0bxJkZfnSiCL.jpg",
+      "title" : "What Men Want",
+      "overview" : "Magically able to hear what men are thinking, a sports agent uses her newfound ability to turn the tables on her overbearing male colleagues.",
+      "original_language" : "en",
+      "vote_count" : 205,
+      "release_date" : "2019-02-08",
+      "video" : false
+    },
+    {
+      "id" : 447404,
+      "vote_average" : 7.2999999999999998,
+      "genre_ids" : [
+        9648,
+        10751,
+        80,
+        14,
+        35,
+        878
+      ],
+      "original_title" : "POKÉMON Detective Pikachu",
+      "backdrop_path" : "\/yXybBEC45p84D0Ky7GmQQYrclVr.jpg",
+      "adult" : false,
+      "popularity" : 92.793000000000006,
+      "poster_path" : "\/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg",
+      "title" : "POKÉMON Detective Pikachu",
+      "overview" : "In a world where people collect pocket-size monsters (pokemon) to do battle, a boy comes across an intelligent monster who seeks to be a detective.",
+      "original_language" : "en",
+      "vote_count" : 20,
+      "release_date" : "2019-05-03",
+      "video" : false
+    },
+    {
+      "id" : 457799,
+      "vote_average" : 6.9000000000000004,
+      "genre_ids" : [
+        53,
+        80,
+        18,
+        36
+      ],
+      "original_title" : "Extremely Wicked, Shockingly Evil and Vile",
+      "backdrop_path" : "\/roAfKxzL6DQ35DlD4idFB5hjVuy.jpg",
+      "adult" : false,
+      "popularity" : 75.585999999999999,
+      "poster_path" : "\/zSuJ3r5zr5T26tTxyygHhgkUAIM.jpg",
+      "title" : "Extremely Wicked, Shockingly Evil and Vile",
+      "overview" : "A chronicle of the crimes of Ted Bundy, from the perspective of his longtime girlfriend, Elizabeth Kloepfer, who refused to believe the truth about him for years.",
+      "original_language" : "en",
+      "vote_count" : 122,
+      "release_date" : "2019-05-02",
+      "video" : false
+    },
+    {
+      "id" : 514439,
+      "vote_average" : 6.7999999999999998,
+      "genre_ids" : [
+        18
+      ],
+      "original_title" : "Breakthrough",
+      "backdrop_path" : "\/6jaNHf9ja84YG3KWMDK1nOnvGDg.jpg",
+      "adult" : false,
+      "popularity" : 56.752000000000002,
+      "poster_path" : "\/t58dx7JIgchr9If5uxn3NmHaHoS.jpg",
+      "title" : "Breakthrough",
+      "overview" : "When he was 14, Smith drowned in Lake St. Louis and was dead for nearly an hour. According to reports at the time, CPR was performed 27 minutes to no avail. Then the youth's mother, Joyce Smith, entered the room, praying loudly. Suddenly, there was a pulse, and Smith came around.",
+      "original_language" : "en",
+      "vote_count" : 28,
+      "release_date" : "2019-04-11",
+      "video" : false
+    },
+    {
+      "id" : 459992,
+      "vote_average" : 7.5,
+      "genre_ids" : [
+        35,
+        10749
+      ],
+      "original_title" : "Long Shot",
+      "backdrop_path" : "\/88r25ghJzVYKq0vaOApqEOZsQlD.jpg",
+      "adult" : false,
+      "popularity" : 45.122999999999998,
+      "poster_path" : "\/m2ttWZ8rMRwIMT7zA48Jo6mTkDS.jpg",
+      "title" : "Long Shot",
+      "overview" : "When Fred Flarsky reunites with his first crush, one of the most influential women in the world, Charlotte Field, he charms her. As she prepares to make a run for the Presidency, Charlotte hires Fred as her speechwriter and sparks fly.",
+      "original_language" : "en",
+      "vote_count" : 19,
+      "release_date" : "2019-05-02",
+      "video" : false
+    },
+    {
+      "id" : 527261,
+      "vote_average" : 0,
+      "genre_ids" : [
+        27,
+        18,
+        53,
+        14
+      ],
+      "original_title" : "The Silence",
+      "backdrop_path" : "\/iHJQIKSLHN2mUUWySpj2MO5HVtS.jpg",
+      "adult" : false,
+      "popularity" : 45.122999999999998,
+      "poster_path" : "\/lTVOquzxw2DPF3MKuYd1ynz9F6H.jpg",
+      "title" : "The Silence",
+      "overview" : "With the world under attack by deadly creatures who hunt by sound, a teen and her family seek refuge outside the city and encounter a mysterious cult.",
+      "original_language" : "en",
+      "vote_count" : 498,
+      "release_date" : "2019-05-16",
+      "video" : false
+    },
+    {
+      "id" : 500904,
+      "vote_average" : 4.7000000000000002,
+      "genre_ids" : [
+        53,
+        18
+      ],
+      "original_title" : "A Vigilante",
+      "backdrop_path" : "\/kReEky4XRCAq22H5V37kDcNY9dj.jpg",
+      "adult" : false,
+      "popularity" : 36.473999999999997,
+      "poster_path" : "\/avoKZfgBzyBGJsrAr2WQOwZK978.jpg",
+      "title" : "A Vigilante",
+      "overview" : "A once abused woman, Sadie, devotes herself to ridding victims of their domestic abusers while hunting down the husband she must kill to truly be free.",
+      "original_language" : "en",
+      "vote_count" : 53,
+      "release_date" : "2019-03-29",
+      "video" : false
+    },
+    {
+      "id" : 457136,
+      "vote_average" : 6.7000000000000002,
+      "genre_ids" : [
+        18,
+        36
+      ],
+      "original_title" : "Mary Queen of Scots",
+      "backdrop_path" : "\/iv5N169nQIzrS0pZ8MBEiemTtVt.jpg",
+      "adult" : false,
+      "popularity" : 36.195999999999998,
+      "poster_path" : "\/b5RMzLAyq5QW6GtN9sIeAEMLlBI.jpg",
+      "title" : "Mary Queen of Scots",
+      "overview" : "In 1561, Mary Stuart, widow of the King of France, returns to Scotland, reclaims her rightful throne and menaces the future of Queen Elizabeth I as ruler of England, because she has a legitimate claim to the English throne. Betrayals, rebellions, conspiracies and their own life choices imperil both Queens. They experience the bitter cost of power, until their tragic fate is finally fulfilled.",
+      "original_language" : "en",
+      "vote_count" : 520,
+      "release_date" : "2018-12-07",
+      "video" : false
+    },
+    {
+      "id" : 522518,
+      "vote_average" : 6,
+      "genre_ids" : [
+        10751
+      ],
+      "original_title" : "A Dog's Journey",
+      "backdrop_path" : "\/52bVQBX0szmltMe5pfcmpqYk1KX.jpg",
+      "adult" : false,
+      "popularity" : 21.762,
+      "poster_path" : "\/wquJChp0NpoqthYdE3YjXNNxvVC.jpg",
+      "title" : "A Dog's Journey",
+      "overview" : "Bailey is living the good life on the farm of Ethan and Hannah. As Bailey’s soul prepares to leave this life for a new one, he promises Ethan to find CJ and protect her at any cost.",
+      "original_language" : "en",
+      "vote_count" : 4,
+      "release_date" : "2019-05-03",
+      "video" : false
+    },
+    {
+      "id" : 420817,
+      "vote_average" : 0,
+      "genre_ids" : [
+        12,
+        14,
+        10402,
+        10749
+      ],
+      "original_title" : "Aladdin",
+      "backdrop_path" : "\/v4yVTbbl8dE1UP2dWu5CLyaXOku.jpg",
+      "adult" : false,
+      "popularity" : 21.43,
+      "poster_path" : "\/uF3zJmoYQUab5tiUfUECKpkkjIJ.jpg",
+      "title" : "Aladdin",
+      "overview" : "A live-action retelling of the 1992 Disney film of the same name.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "2019-05-22",
+      "video" : false
+    },
+    {
+      "id" : 454458,
+      "vote_average" : 8.5,
+      "genre_ids" : [
+        16,
+        35,
+        10751,
+        12,
+        14
+      ],
+      "original_title" : "UglyDolls",
+      "backdrop_path" : "\/4v07pZGlIHveHCrU6rW236wnAyB.jpg",
+      "adult" : false,
+      "popularity" : 20.047000000000001,
+      "poster_path" : "\/uHTMyvS26YfKld91gGFJR6ALPnf.jpg",
+      "title" : "UglyDolls",
+      "overview" : "A story centered around the plush specialty toys.",
+      "original_language" : "en",
+      "vote_count" : 1,
+      "release_date" : "2019-05-01",
+      "video" : false
+    },
+    {
+      "id" : 449562,
+      "vote_average" : 0,
+      "genre_ids" : [
+        35
+      ],
+      "original_title" : "The Hustle",
+      "backdrop_path" : "\/s6awXOxTKYQLSktiIJfI3969dZH.jpg",
+      "adult" : false,
+      "popularity" : 17.827999999999999,
+      "poster_path" : "\/mkcHe0czp7oi9leTFMGGV4XhDhQ.jpg",
+      "title" : "The Hustle",
+      "overview" : "A remake of the 1988 comedy, 'Dirty Rotten Scoundrels', in which two down-and-out con artists engage in a \"loser leaves town\" contest.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "2019-05-09",
+      "video" : false
+    },
+    {
+      "id" : 505058,
+      "vote_average" : 6.0999999999999996,
+      "genre_ids" : [
+        27
+      ],
+      "original_title" : "Unfriended: Dark Web",
+      "backdrop_path" : "\/2Dk9WG8R0PYlgZjo5F9iheKybpO.jpg",
+      "adult" : false,
+      "popularity" : 16.762,
+      "poster_path" : "\/nOXuOeD07nZPT29IgiGT0S8PZH.jpg",
+      "title" : "Unfriended: Dark Web",
+      "overview" : "​When a 20-something finds a cache of hidden files on his new laptop, he and his friends are unwittingly thrust into the depths of the dark web. They soon discover someone has been watching their every move and will go to unimaginable lengths to protect the dark web.",
+      "original_language" : "en",
+      "vote_count" : 317,
+      "release_date" : "2018-07-19",
+      "video" : false
+    },
+    {
+      "id" : 531309,
+      "vote_average" : 0,
+      "genre_ids" : [
+        27,
+        878,
+        18,
+        53
+      ],
+      "original_title" : "Brightburn",
+      "backdrop_path" : "\/uHEI6v8ApQusjbaRZ8o7WcLYeWb.jpg",
+      "adult" : false,
+      "popularity" : 15.477,
+      "poster_path" : "\/roslEbKdY0WSgYaB5KXvPKY0bXS.jpg",
+      "title" : "Brightburn",
+      "overview" : "What if a child from another world crash-landed on Earth, but instead of becoming a hero to mankind, he proved to be something far more sinister?",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "2019-05-15",
+      "video" : false
+    },
+    {
+      "id" : 412117,
+      "vote_average" : 0,
+      "genre_ids" : [
+        12,
+        16,
+        35,
+        10751
+      ],
+      "original_title" : "The Secret Life of Pets 2",
+      "backdrop_path" : "\/4vf0SX6tcGdcT1MNziTkfKAAMfz.jpg",
+      "adult" : false,
+      "popularity" : 14.932,
+      "poster_path" : "\/xuGdAwetqSGxNNwZ2DjS8U7BBzn.jpg",
+      "title" : "The Secret Life of Pets 2",
+      "overview" : "A sequel to the animated hit THE SECRET LIFE OF PETS.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "2019-05-24",
+      "video" : false
+    },
+    {
+      "id" : 504608,
+      "vote_average" : 0,
+      "genre_ids" : [
+        10402,
+        18
+      ],
+      "original_title" : "Rocketman",
+      "backdrop_path" : "\/oAr5bgf49vxga9etWoQpAeRMvhp.jpg",
+      "adult" : false,
+      "popularity" : 14.061,
+      "poster_path" : "\/f4FF18ia7yTvHf2izNrHqBmgH8U.jpg",
+      "title" : "Rocketman",
+      "overview" : "The story of Elton John's life, from his years as a prodigy at the Royal Academy of Music through his influential and enduring musical partnership with Bernie Taupin.",
+      "original_language" : "en",
+      "vote_count" : 0,
+      "release_date" : "2019-05-18",
+      "video" : false
+    },
+    {
+      "id" : 451915,
+      "vote_average" : 7.5999999999999996,
+      "genre_ids" : [
+        18
+      ],
+      "original_title" : "Beautiful Boy",
+      "backdrop_path" : "\/sOhtC4cmaYPOlcjXCWxxrx2NKKn.jpg",
+      "adult" : false,
+      "popularity" : 12.951000000000001,
+      "poster_path" : "\/i7gsLrNxpSf8NF5IZIrcOEfMyA3.jpg",
+      "title" : "Beautiful Boy",
+      "overview" : "After he and his first wife separate, journalist David Sheff struggles to help their teenage son, who goes from experimenting with drugs to becoming devastatingly addicted to methamphetamine.",
+      "original_language" : "en",
+      "vote_count" : 457,
+      "release_date" : "2018-10-12",
+      "video" : false
+    },
+    {
+      "id" : 297725,
+      "vote_average" : 7,
+      "genre_ids" : [
+        35,
+        14
+      ],
+      "original_title" : "The Man Who Killed Don Quixote",
+      "backdrop_path" : "\/7m0UQtFp3KQxUvKNr2DN9lDPdE.jpg",
+      "adult" : false,
+      "popularity" : 11.23,
+      "poster_path" : "\/4o4zw2c9sfHvszIb5xpuFagnouR.jpg",
+      "title" : "The Man Who Killed Don Quixote",
+      "overview" : "Toby, a cynical advertising director finds himself trapped in the outrageous delusions of an old Spanish shoe-maker who believes himself to be Don Quixote. In the course of their comic and increasingly surreal adventures, Toby is forced to confront the tragic repercussions of a film he made in his idealistic youth.",
+      "original_language" : "en",
+      "vote_count" : 306,
+      "release_date" : "2018-05-19",
+      "video" : false
+    }
+  ],
+  "dates" : {
+    "maximum" : "2019-05-26",
+    "minimum" : "2019-05-11"
+  },
+  "total_pages" : 11,
+  "total_results" : 209,
+  "page" : 1
+}
